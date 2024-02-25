@@ -43,11 +43,16 @@ This demo generates a review for a given PDF file.
 
 #### 1. Convert PDF to json file:
 ```
-java science-parse-cli-assembly-2.0.3 PATH_TO_PDF PATH_TO_JSON
+java -Xmx6g -jar ./science-parse-cli-assembly-2.0.3.jar PATH_TO_PDF -o JSON_SAVE_DIRECTORY
+```
+
+#### 2. Generate the review:
+```
+python demo.py --json_path PATH_TO_JSON
 ```
 
 ## Cite
-Please cite our paper if you use this code in your own work:
+Please cite our paper if you use this implementation in your own work:
 ```
 @misc{gao2024reviewer2,
       title={Reviewer2: Optimizing Review Generation Through Prompt Generation}, 
